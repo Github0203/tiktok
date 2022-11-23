@@ -9,37 +9,44 @@ import 'package:tik_tok_ui/widgets/video_description.dart';
 class Home extends StatelessWidget {
   Widget get topSection => Container(
         height: 100.0,
-        color: Colors.yellow[300],
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            Text("Flollowing"),
+            Container(width: 15),
+            Text(
+              "For you",
+              style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
       );
 
-
-  
-
-  Widget get middleSection => Expanded( child: Row(
-    mainAxisSize: MainAxisSize.max,
-    crossAxisAlignment: CrossAxisAlignment.end,
-    children: <Widget>[VideoDescripton(), ActionToolbar()],
-  )
-          );  
-
- 
+  Widget get middleSection => Expanded(
+          child: Row(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[VideoDescripton(), ActionToolbar()],
+      ));
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
-      child: Column(
-        children: <Widget>[
-          // Top section
-          topSection,
+          child: Column(
+            children: <Widget>[
+              // Top section
+              topSection,
 
-          // Middle section
-          middleSection,
+              // Middle section
+              middleSection,
 
-          // Bottom section
-          BottomToolbar(),
-        ],
-      ),
-    ));
+              // Bottom section
+              BottomToolbar(),
+            ],
+          ),
+        ));
   }
 }

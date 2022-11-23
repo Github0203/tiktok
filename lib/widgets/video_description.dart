@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class VideoDescripton extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -13,14 +12,22 @@ class VideoDescripton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('@firstjonny', style: TextStyle(fontWeight: FontWeight.bold),),
+            Text(
+              '@firstjonny',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             Text('Video title and some other stuff'),
-            Row(
-              children: [
-                Icon(Icons.music_note, size: 15),
-                Text('Artist name - Album name - Song', style: TextStyle(fontSize: 12),)
-              ]
-            )
+            Row(children: [
+              Icon(
+                Icons.music_note,
+                size: 15,
+                color: Colors.white,
+              ),
+              Text(
+                'Artist name - Album name - Song',
+                style: TextStyle(fontSize: 12),
+              )
+            ])
           ],
         ),
       ),
